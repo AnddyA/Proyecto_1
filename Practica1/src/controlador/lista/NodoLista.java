@@ -11,19 +11,21 @@ import modelo.Venta;
  * @author andy
  */
 public class NodoLista<E> {
-    private E info;//dato generico
-    private NodoLista sig;//dato estrucutrado
+    private E info; //dato generico
+    private NodoLista sig; // dato estructurado
 
-    private NodoLista(){
+    public NodoLista() {
         info = null;
         sig = null;
     }
-    
+
     public NodoLista(E info, NodoLista sig) {
         this.info = info;
         this.sig = sig;
     }
 
+    
+    
     public E getInfo() {
         return info;
     }
@@ -39,9 +41,6 @@ public class NodoLista<E> {
     public void setSig(NodoLista sig) {
         this.sig = sig;
     }
-    
-    
-   
-    
-    
+ 
 }
+

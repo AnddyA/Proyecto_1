@@ -4,8 +4,9 @@
  */
 package modelo;
 
+
 import controlador.lista.ListaControl;
-import controlador.lista.NodoLista;
+import java.util.LinkedList;
 
 /**
  *
@@ -14,8 +15,24 @@ import controlador.lista.NodoLista;
 public class Sucursal {
     private Integer id;
     private String nombre;
-    private ListaControl <Venta> venta = new ListaControl<>();
-    
+    private ListaControl<Venta> ventas;
+
+    public Sucursal() {
+        ventas = new ListaControl<>();
+    }
+
+    public Sucursal(String nombreSucursal) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public ListaControl<Venta> getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(ListaControl<Venta> ventas) {
+        this.ventas = ventas;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -36,7 +53,5 @@ public class Sucursal {
     public String toString() {
         return nombre + " " + id;
     }
-    
-    
-    
 }
+

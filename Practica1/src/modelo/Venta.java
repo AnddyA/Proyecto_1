@@ -11,7 +11,7 @@ package modelo;
 public class Venta {
     private Integer id;
     private Double valor;
-    private String Mes;
+    private EnuMes mes;
 
     public Integer getId() {
         return id;
@@ -29,13 +29,17 @@ public class Venta {
         this.valor = valor;
     }
 
-    public String getMes() {
-        return Mes;
+    public EnuMes getMes() {
+        return mes;
     }
 
-    public void setMes(String Mes) {
-        this.Mes = Mes;
+    public void setMes(EnuMes mes) {
+        this.mes = mes;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return mes.toString() + " " + valor;
+    }
 }
+
