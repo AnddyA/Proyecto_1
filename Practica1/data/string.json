@@ -1,0 +1,14 @@
+{
+    "controlador.pila.PilaI;": {
+        "pila": {
+            "cabecera": {
+                "info": {
+                    "@class": "string",
+                    "$": "Se ha guardado una sucursal 21:10:59.897052"
+                }
+            },
+            "size": 10,
+            "pila": 20
+        }
+    }
+}

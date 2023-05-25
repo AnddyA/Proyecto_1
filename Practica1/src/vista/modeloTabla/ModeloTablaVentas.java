@@ -10,6 +10,7 @@ import controlador.lista.exception.VacioException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.AbstractTableModel;
+import modelo.Sucursal;
 import modelo.Venta;
 
 /**
@@ -18,7 +19,8 @@ import modelo.Venta;
  */
 public class ModeloTablaVentas extends AbstractTableModel {
     private ListaControl<Venta> datos = new ListaControl<>();
-
+    
+    
     public ListaControl<Venta> getDatos() {
         return datos;
     }

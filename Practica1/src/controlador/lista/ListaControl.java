@@ -6,8 +6,7 @@ package controlador.lista;
 
 import controlador.lista.exception.PosicionException;
 import controlador.lista.exception.VacioException;
-import modelo.Sucursal;
-import modelo.Venta;
+
 
 /**
  *
@@ -148,7 +147,15 @@ public class ListaControl<E> {
             return dato;
         }
     }
-
+    
+    public Integer getSize() {
+        return size;
+    }
+    
+    public void setSize(Integer size) {
+        this.size = size;
+    }
+    
     public Integer size() {
         return size;
     }
@@ -166,8 +173,44 @@ public class ListaControl<E> {
             throw new PosicionException();
         }
     }
+    
+    public void modificar(Integer pos, E info) throws PosicionException, VacioException {
+        if (isEmpty()) {
+            throw new VacioException();
+        } else if (pos >= 0 && pos < size()) {
+            NodoLista<E> aux = cabecera;
+            for (int i = 0; i < pos; i++) {
+                aux = aux.getSig();
+            }
+            aux.setInfo(info);
+        } else {
+            throw new PosicionException();
+        }
+    }
 
     public Integer getCapacidad() {
         return size;
     }
+    
+//    public void modificar(Integer pos, E info) throws VacioException, PosicionException{
+//        if(isEmpty()){
+//            throw new VacioException();
+//        }else{
+//            if(pos >= 0 && pos < size()){
+//                if(pos == 0){
+//                    this.cabecera.setInfo(info);
+//                }else{
+//                    NodoLista<E> aux = cabecera;
+//                    for(int i = 0; i < pos; i++){
+//                        aux = aux.getSig();
+//                    }
+//                    aux.setInfo(info);
+//                }
+//            }else{
+//                throw new PosicionException();
+//            }
+//        }
+//    }
+    
+    
 }

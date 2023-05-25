@@ -7,6 +7,8 @@ package controlador.util;
 import controlador.SucursalControl;
 import controlador.lista.ListaControl;
 import controlador.lista.NodoLista;
+import controlador.lista.exception.PosicionException;
+import controlador.lista.exception.VacioException;
 import modelo.Sucursal;
 import modelo.Venta;
 
@@ -15,6 +17,7 @@ import modelo.Venta;
  * @author andy
  */
 public class Utilidades {
+    
     public static <E> void imprimir(ListaControl<E> obj) {
         System.out.println("Lista de " + obj.getClass().getSimpleName());
 
@@ -49,6 +52,44 @@ public class Utilidades {
         }
 
         return suma / cantidadVentas;
+    }
+    
+    public static String sucursalVentaMayor(ListaControl<Sucursal> sucursales) throws VacioException, PosicionException {
+        String sucursalInfo = "";
+        double aux = 0;
+        double sucursalMayor = 0;
+
+        for (int i = 0; i < sucursales.size(); i++) {
+            if (sucursales.get(i) != null) {
+                aux = sumarVentas(sucursales.get(i));
+                if (sucursalMayor < aux) {
+                    sucursalMayor = aux;
+                    sucursalInfo = "La mayor venta es de " + aux + " de la sucursal " + sucursales.get(i).getNombre();
+                }
+            }
+        }
+        
+        if (sucursalMayor == 0) {
+            return "Ingrese las ventas";
+        }
+        return sucursalInfo;
+    }
+
+    public static String sucursalVentaMenor(ListaControl<Sucursal> sucursales) throws VacioException, PosicionException {
+        String sucursalInfo = "";
+        double aux = 0;
+        double sucursalMenor = -1;
+
+        for (int i = 0; i < sucursales.size(); i++) {
+            if (sucursales.get(i) != null) {
+                aux = sumarVentas(sucursales.get(i));
+                if (sucursalMenor > aux || sucursalMenor == -1) {
+                    sucursalMenor = aux;
+                    sucursalInfo = "La menor venta es de " + aux + " de la sucursal " + sucursales.get(i).getNombre();
+                }
+            }
+        }
+        return sucursalInfo;
     }
 }
 
