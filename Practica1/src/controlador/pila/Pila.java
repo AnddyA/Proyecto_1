@@ -14,22 +14,23 @@ import controlador.lista.exception.VacioException;
  */
 public class Pila<E> extends ListaControl<E>{
     
-    private int pila;
+    private int top;
 
-    public Pila(int pila) {
-        this.pila = pila;
+    public Pila(int top) {
+        this.top = top;
     }
 
-    public int getPila() {
-        return pila;
+    public int getTop() {
+        return top;
     }
 
-    public void setPila(int pila) {
-        this.pila = pila;
+    public void setTop(int top) {
+        this.top = top;
     }
+
     
-    public Boolean isFull(){
-        return (size() >= pila);
+    public boolean isFull(){
+        return (size() >= top);
     }
     
     public void push(E info) throws VacioException{

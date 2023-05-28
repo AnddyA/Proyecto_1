@@ -38,22 +38,21 @@ public class ModeloTablaPetisiones extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int i, int i1) {
-       Peticiones p = null;
       
         try {
-            p = peticion.get(i);
+            Peticiones p = peticion.get(i);
+            
+            return p.getMeng();
         } catch (VacioException ex) {
             Logger.getLogger(ModeloTablaPetisiones.class.getName()).log(Level.SEVERE, null, ex);
         } catch (PosicionException ex) {
             Logger.getLogger(ModeloTablaPetisiones.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        System.out.println(p.getMeng());
-        switch (i1) {
-            case 0:
-                return (p != null) ? p.getMeng() : "";
-            default:
-        }
+
         return null;
+    }
+    
+    public String getColumnName(int column){
+        return "Peticiones";
     }
 }

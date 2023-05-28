@@ -15,8 +15,8 @@ public class PilaI<E> {
     
     private Pila<E> pilai;
 
-    public PilaI(int pila){
-        pilai = new Pila<>(pila);
+    public PilaI(int top){
+        pilai = new Pila<>(top);
     } 
     
     public void push(E obj) throws VacioException{
@@ -28,7 +28,7 @@ public class PilaI<E> {
     }
     
     public int getPila(){
-        return pilai.getPila();
+        return pilai.getTop();
     }
     
     public int size(){

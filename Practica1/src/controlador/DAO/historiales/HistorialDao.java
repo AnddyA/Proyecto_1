@@ -35,7 +35,7 @@ public class HistorialDao implements InterfazHistorial<String> {
         try {
             historial.push(obj);
         } catch (VacioException ex) {
-            Logger.getLogger(HistorialDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error: " + ex.getMessage());
         }
 
         conexion.getXStream().alias(clazz.getSimpleName().toLowerCase(), clazz);
@@ -45,8 +45,8 @@ public class HistorialDao implements InterfazHistorial<String> {
     public PilaI<String> listar() {
         PilaI<String> historial = new PilaI<>(20);
 
+        conexion.getXStream().alias(clazz.getSimpleName().toLowerCase(), clazz);
         try {
-            conexion.getXStream().alias(clazz.getSimpleName().toLowerCase(), clazz);
             historial = (PilaI<String>) conexion.getXStream().fromXML(new FileReader(url));
         } catch (FileNotFoundException ex) {
             Logger.getLogger(HistorialDao.class.getName()).log(Level.SEVERE, null, ex);

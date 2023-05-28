@@ -58,26 +58,4 @@ public class PeticionDao implements InterfazPeticiones<Peticiones> {
         }
         return peticiones;
     }
-
-//    public static void main(String[] args){
-//        SucursalDao sd = new SucursalDao();
-//        
-//        sd.getSucursal().setNombre("Alice");
-//        sd.getSucursal().setId(sd.generarId());
-//        
-//        Venta v = new Venta();
-//        v.setMes(EnuMes.MAYO);
-//        v.setValor(10080.0);
-//        sd.getSucursal().getVentas().insertar(v);
-//        
-//        try {
-//            sd.guardar(sd.getSucursal());
-//            System.out.println(sd.listar());
-//            sd.listar().imprimir();
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            e.printStackTrace();
-//        }
-//        
-//    }
 }

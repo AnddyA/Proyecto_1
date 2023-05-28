@@ -177,13 +177,16 @@ public class ListaControl<E> {
     public void modificar(Integer pos, E info) throws PosicionException, VacioException {
         if (isEmpty()) {
             throw new VacioException();
-        } else if (pos >= 0 && pos < size()) {
+        } else
+            if (pos >= 0 && pos < size()) {
+                System.out.println("aqui");
             NodoLista<E> aux = cabecera;
             for (int i = 0; i < pos; i++) {
                 aux = aux.getSig();
             }
             aux.setInfo(info);
         } else {
+                System.out.println("aqui no");
             throw new PosicionException();
         }
     }

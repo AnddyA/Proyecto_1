@@ -4,7 +4,6 @@
  */
 package controlador.cola;
 
-import controlador.exception.EspacioException;
 import controlador.lista.exception.PosicionException;
 import controlador.lista.exception.VacioException;
 
@@ -32,8 +31,8 @@ public class ColaI<E> {
         return cola.getTop();
     }
 
-    public E get(int pos) throws VacioException, PosicionException {
-        return cola.get(pos);
+    public E get(int index) throws VacioException, PosicionException {
+        return cola.get(index);
     }
     
     public int size() {

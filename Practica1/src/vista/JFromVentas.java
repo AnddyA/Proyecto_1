@@ -5,11 +5,14 @@
 package vista;
 
 import controlador.DAO.SucursalDao;
+import controlador.DAO.historiales.HistorialDao;
 import controlador.SucursalControl;
 import controlador.exception.EspacioException;
 import controlador.lista.ListaControl;
 import controlador.lista.exception.PosicionException;
 import controlador.lista.exception.VacioException;
+import java.io.IOException;
+import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -27,7 +30,8 @@ public class JFromVentas extends java.awt.Dialog {
     private SucursalControl control = new SucursalControl();
     private ModeloTablaVentas modelo = new ModeloTablaVentas();
     private int fila = -1;
-
+    private HistorialDao hist = new HistorialDao();
+    
     /**
      * Creates new form JFromVentas
      */
@@ -81,9 +85,10 @@ public class JFromVentas extends java.awt.Dialog {
         
     }
 
-    private void modificar() throws EspacioException {
+    private void modificar() throws EspacioException, IOException {
         if (!txtValor.getText().trim().isEmpty() && !lblMes.getText().isEmpty()) {
             this.control.guardarVentas(fila, Double.parseDouble(txtValor.getText()));
+            hist.guardarHistorial("Venta guardada en sucursal " + lblSucursal.getText()+ " " + LocalTime.now());
             this.limpiar();
             JOptionPane.showMessageDialog(null, "Se ha actualizado", "OK", JOptionPane.INFORMATION_MESSAGE);
         } else {
@@ -290,6 +295,8 @@ public class JFromVentas extends java.awt.Dialog {
             //guardarJson(lblSucursal.getText(), mes, valor);
 
         } catch (EspacioException ex) {
+            Logger.getLogger(JFromVentas.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(JFromVentas.class.getName()).log(Level.SEVERE, null, ex);
         }
 

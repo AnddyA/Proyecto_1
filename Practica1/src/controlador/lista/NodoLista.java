@@ -14,7 +14,7 @@ public class NodoLista<E> {
     private E info; //dato generico
     private NodoLista sig; // dato estructurado
 
-    public NodoLista() {
+    public NodoLista(E info) {
         info = null;
         sig = null;
     }

@@ -1,14 +1,1 @@
-{
-    "controlador.pila.PilaI;": {
-        "pila": {
-            "cabecera": {
-                "info": {
-                    "@class": "string",
-                    "$": "Se ha guardado una sucursal 21:10:59.897052"
-                }
-            },
-            "size": 10,
-            "pila": 20
-        }
-    }
-}
+{"controlador.pila.PilaI":{"pilai":{"cabecera":{"info":{"@class":"string","$":"Peticion guardada05:27:42.194257"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Loja 05:18:56.873132"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Machala 05:18:37.771080"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Machala 05:18:30.689122"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Machala 05:18:25.418731"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Andy 05:18:14.437092"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Andy 05:18:09.342697"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Andy 05:18:04.863157"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Loja 05:17:17.313177"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Loja 05:17:11.283263"},"sig":{"info":{"@class":"string","$":"Venta guardada en sucursal Loja 05:17:06.722742"},"sig":{"info":{"@class":"string","$":"Sucursal Machala guardada 05:16:38.514272"},"sig":{"info":{"@class":"string","$":"Sucursal Loja guardada 19:38:16.251486"},"sig":{"info":{"@class":"string","$":"Peticion guardada19:38:06.217670"},"sig":{"info":{"@class":"string","$":"Sucursal Andy guardada 19:23:24.217474"},"sig":{"info":{"@class":"string","$":"Guardado de prueb 19:16:03.269738"}}}}}}}}}}}}}}}}},"size":16,"top":20}}}

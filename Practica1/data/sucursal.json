@@ -9,28 +9,28 @@
                         "info": {
                             "@class": "modelo.Venta",
                             "id": 0,
-                            "valor": 22,
+                            "valor": 0,
                             "mes": "ENERO"
                         },
                         "sig": {
                             "info": {
                                 "@class": "modelo.Venta",
                                 "id": 1,
-                                "valor": 453,
+                                "valor": 0,
                                 "mes": "FEBRERO"
                             },
                             "sig": {
                                 "info": {
                                     "@class": "modelo.Venta",
                                     "id": 2,
-                                    "valor": 453,
+                                    "valor": 0,
                                     "mes": "MARZO"
                                 },
                                 "sig": {
                                     "info": {
                                         "@class": "modelo.Venta",
                                         "id": 3,
-                                        "valor": 0,
+                                        "valor": 45,
                                         "mes": "ABRIL"
                                     },
                                     "sig": {
@@ -51,7 +51,7 @@
                                                 "info": {
                                                     "@class": "modelo.Venta",
                                                     "id": 6,
-                                                    "valor": 0,
+                                                    "valor": 12,
                                                     "mes": "JULIO"
                                                 },
                                                 "sig": {
@@ -65,7 +65,7 @@
                                                         "info": {
                                                             "@class": "modelo.Venta",
                                                             "id": 8,
-                                                            "valor": 0,
+                                                            "valor": 28,
                                                             "mes": "SEPTIEMBRE"
                                                         },
                                                         "sig": {
@@ -113,7 +113,7 @@
                             "info": {
                                 "@class": "modelo.Venta",
                                 "id": 0,
-                                "valor": 0,
+                                "valor": 22,
                                 "mes": "ENERO"
                             },
                             "sig": {
@@ -127,21 +127,21 @@
                                     "info": {
                                         "@class": "modelo.Venta",
                                         "id": 2,
-                                        "valor": 0,
+                                        "valor": 56,
                                         "mes": "MARZO"
                                     },
                                     "sig": {
                                         "info": {
                                             "@class": "modelo.Venta",
                                             "id": 3,
-                                            "valor": 454,
+                                            "valor": 0,
                                             "mes": "ABRIL"
                                         },
                                         "sig": {
                                             "info": {
                                                 "@class": "modelo.Venta",
                                                 "id": 4,
-                                                "valor": 0,
+                                                "valor": 34.98,
                                                 "mes": "MAYO"
                                             },
                                             "sig": {
@@ -183,7 +183,7 @@
                                                                     "info": {
                                                                         "@class": "modelo.Venta",
                                                                         "id": 10,
-                                                                        "valor": 0,
+                                                                        "valor": 67,
                                                                         "mes": "NOVIEMBRE"
                                                                     },
                                                                     "sig": {
@@ -211,7 +211,7 @@
                 "sig": {
                     "info": {
                         "@class": "modelo.Sucursal",
-                        "nombre": "machala",
+                        "nombre": "Machala",
                         "ventas": {
                             "cabecera": {
                                 "info": {
@@ -231,14 +231,14 @@
                                         "info": {
                                             "@class": "modelo.Venta",
                                             "id": 2,
-                                            "valor": 0,
+                                            "valor": 23.5,
                                             "mes": "MARZO"
                                         },
                                         "sig": {
                                             "info": {
                                                 "@class": "modelo.Venta",
                                                 "id": 3,
-                                                "valor": 1000,
+                                                "valor": 0,
                                                 "mes": "ABRIL"
                                             },
                                             "sig": {
@@ -273,7 +273,7 @@
                                                                 "info": {
                                                                     "@class": "modelo.Venta",
                                                                     "id": 8,
-                                                                    "valor": 0,
+                                                                    "valor": 23.8,
                                                                     "mes": "SEPTIEMBRE"
                                                                 },
                                                                 "sig": {
@@ -294,7 +294,7 @@
                                                                             "info": {
                                                                                 "@class": "modelo.Venta",
                                                                                 "id": 11,
-                                                                                "valor": 0,
+                                                                                "valor": 49,
                                                                                 "mes": "DICIEMBRE"
                                                                             }
                                                                         }
